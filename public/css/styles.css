@@ -7,10 +7,6 @@
 }
 
 /* NAVBAR */
-
-#logo img {
-    height: 70px;
-}
 #navbar {
     padding: 1.2em 1.5em;
     margin-bottom: 1em;
@@ -26,11 +22,39 @@
 }
 
 #navbar ul li {
-    margin-left: 1em;
+    margin-left: 3em;
 }
 
 #navbar ul li a {
     text-decoration: none;
     transition: 0.5;
     font-weight: bold;
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: .3em;
+}
+
+.form-control input,
+.form-control textarea {
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"],
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: .7em 1.5em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
