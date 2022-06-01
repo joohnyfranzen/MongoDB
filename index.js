@@ -4,8 +4,11 @@ const exphbs = require('express-handlebars')
 const app = express()
 
 const conn = require('./db/conn')
+
+const productRoutes = require('./routes/productRoutes')
+
 app.engine('handlebars', exphbs.engine())
-app.set('view engine', 'hanglebars')
+app.set('view engine', 'handlebars')
 
 
 // read body
@@ -16,3 +19,10 @@ app.use(
 )
 
 app.use(express.json())
+
+
+app.use(express.static('public'))
+
+app.use('/products', productRoutes)
+
+app.listen(3000)
